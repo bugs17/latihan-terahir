@@ -29,16 +29,16 @@ const BlogDetails = () => {
 
     return (
         <>
-            <section>
+            <section className='section'>
                 {loading && <i>Loading...</i>}
-                <h1>{article.title}</h1>
-                <time>{new Date(article.publishedAt).toLocaleDateString()}</time>
-                <p>{article.summary}</p>
-                <p>
+                <h1 className='section-title'>{article.title}</h1>
+                <time className='artikel-time'>{new Date(article.publishedAt).toLocaleDateString()}</time>
+                <p className='section-desc'>{article.summary}</p>
+                <p className='artikel-sumber'>
                     Sumber : <a href={article.url} target='_blank' rel="noreferrer">{article.newsSite}</a>
                 </p>
                 
-                <img src={article.imageUrl} alt="gambar" />
+                <img className='artikel-img' src={article.imageUrl} alt="gambar" />
             </section>
         </>
     );
